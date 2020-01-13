@@ -42,16 +42,20 @@ Key - Title this will tell you what picture it set to, make sure it's unique
 This will activate on the 20th of December and will stay active for 7 days.
 
 
-Now, we need to start the timer in javascript:
 
 
+Now require it in your bot file, and call the constructor.
 ```js
 const avatarChanger = require('./avatarchanger')
 avatarChanger("./avatars/", token);
-
-//bot start
+```  
+Now, we need to start the timer in javascript:  
+```js
 avatarChanger.timer.Start()
 ```  
+(I recommend doing this on `bot.ready`)  
+  
+  
 Now This will run every 4 hours, and update the avatar if necessary.
 The `token` is your bot token, this is required to update the avatar.
 
