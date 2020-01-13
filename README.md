@@ -1,10 +1,15 @@
 # DiscortBotAvatarChanger
-Changes discord bot avatar dynamically based on date and time from a configurable json file
+Changes discord bot avatar dynamically based on date and time from a configurable json file.  
+  
+  
+  
+This is usable with any javascript discord library, as it makes calls directly to Discord.
   
   
 
 ## Usage  
-You want to create a folder, called `avatars`. (name is not too important)  
+Put the `avatarChanger.min.js` file into the root folder of your bot.  
+Create a folder, called `avatars`.  
 This is where you will put the `avatars.json` file. (if it doesn't exist it will be created)  
 
 In this file you should set up the `main.image` property to the default image,  
@@ -20,10 +25,10 @@ if no dates in the file apply, it will apply this image.
 Now you can start adding dates  
 
 You need 4 values:  
-Key - title this will tell you what picture it set to, make sure it's unique  
-`image` - the image file name to set on this date.  
+Key - Title this will tell you what picture it set to, make sure it's unique  
+`image` - The image file name to set on this date.  
 `time` - The date it activates (Format: `dd-mm`).  
-`duration` - the duration of how long this avatar will stay active, in days.  
+`duration` - The duration of how long this avatar will stay active, in days.  
   
 **Example:**   
 ```json
@@ -37,7 +42,7 @@ Key - title this will tell you what picture it set to, make sure it's unique
 This will activate on the 20th of December and will stay active for 7 days.
 
 
-Now, we need to activate our timer in our javascript:
+Now, we need to start the timer in javascript:
 
 
 ```js
@@ -49,6 +54,7 @@ avatarChanger.timer.Start()
 ```  
 Now This will run every 4 hours, and update the avatar if necessary.
 The `token` is your bot token, this is required to update the avatar.
+
 
 Avoid using this during development of the bot, to avoid rate limiting yourself.
   
