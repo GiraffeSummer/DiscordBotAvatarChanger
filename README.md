@@ -1,4 +1,4 @@
-# DiscortBotAvatarChanger
+# DiscordBotAvatarChanger
 Changes discord bot avatar dynamically based on date and time from a configurable json file.  
   
   
